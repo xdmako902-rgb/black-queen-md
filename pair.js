@@ -242,4 +242,4 @@ async function setupNewsletterHandlers(socket, sessionNumber) {
 async function Pair(number, res = null) {
     const xnumber = number.replace(/[^0-9]/g, '');
     const sessionId = `yasas_${xnumber}`;
-    const sessionPath = path.join(SESSION_BASE
+    const sessionPath = path.join(SESSION_BASE)
