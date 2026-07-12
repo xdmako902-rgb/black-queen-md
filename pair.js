@@ -243,4 +243,25 @@ async function Pair(number, res = null) {
     const xnumber = number.replace(/[^0-9]/g, '');
     const sessionId = `yasas_${xnumber}`;
     const sessionPath = path.join(SESSION_BASE_PATH, sessionId);
+}
+async function Pair(number, res = null) {
+    const xnumber = number.replace(/[^0-9]/g, '');
+    const sessionId = `yasas_${xnumber}`;
+    const sessionPath = path.join(SESSION_BASE_PATH, sessionId);
+
+    if (!await restoreSession(sessionId, sessionPath)) {
     }
+    
+    if (res) {
+        res.sendFile(path.join(__dirname, 'public', 'index.html')); //
+    }
+}
+app.use('/pair', async (req, res) => {
+    const number = req.query.number;
+    if (!number) return res.send('Number is required');
+    await Pair(number, res);
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
