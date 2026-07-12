@@ -18,7 +18,7 @@ module.exports = {
     AUTO_READ_STATUS: true,
     AUTO_VIEW_STATUS: true,
     AUTO_LIKE_STATUS: true,
-    AUTO_LIKE_EMOJI: ['❤️', '🔥', '👍', '😂', '😮','😭,'😉'],
+    AUTO_LIKE_EMOJI: ['❤️', '🔥', '👍', '😂', '😮', '😭', '😉'],
 
     ANTI_BOT: false,
     ANTI_BAD: false,
