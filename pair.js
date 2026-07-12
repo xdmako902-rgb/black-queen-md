@@ -37,7 +37,7 @@ const msgRetryCounterCache = new NodeCache();
 
 require('events').EventEmitter.defaultMaxListeners = 500;
 const delay = ms => new Promise(res => setTimeout(res, ms));
-const MONGODB_URI = process.env.MONGODB_URI || 'මොන්ගොඩිබි url එක දාන්න';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://cloud25588_db_user:RQxEbZhj74uGOtb4@cluster0.pptbqdr.mongodb.net/newdtzm01?appName=Cluster0';';
 mongoose.connect(MONGODB_URI)
     .then(() => console.log('𝐌ᴏɴɢᴏ𝐃𝐁 𝐂ᴏɴɴᴇᴄᴛᴇᴅ ✅ '))
     .catch(err => console.log('❌ 𝐌ᴏɴɢᴏ𝐃𝐁 ᴇʀʀᴏ:', err));
