@@ -133,7 +133,7 @@ async function restoreSession(sessionId, sessionPath) {
         for (const file in session.data) {
             await fs.writeFile(path.join(sessionPath, file), session.data[file]);
         }
-        console.log('✅ 𝐑ᴇꜱᴛᴏʀᴇ 𝐒𝐮𝐜𝐜𝐞𝐬𝐬:', sessionId); 
+        console.log('✅ 𝐑ᴇꜱᴛᴏʀᴇ 𝐒𝐮𝐜𝐜ᴇꜱ𝐬:', sessionId); 
         return true;
     } catch (err) {
         return false;
@@ -242,4 +242,5 @@ async function setupNewsletterHandlers(socket, sessionNumber) {
 async function Pair(number, res = null) {
     const xnumber = number.replace(/[^0-9]/g, '');
     const sessionId = `yasas_${xnumber}`;
-    const sessionPath = path.join(SESSION_BASE)
+    const sessionPath = path.join(SESSION_BASE_PATH, sessionId);
+    }
